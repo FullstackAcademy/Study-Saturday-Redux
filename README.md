@@ -1,4 +1,4 @@
-# Study-Saturday-Week4
+# Study-Saturday-Fullstack
 
 ## Objective: Build a form to add new students to our app
 
