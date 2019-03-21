@@ -16,7 +16,7 @@
 
 3) `npm run seed`
 
-4) `git checkout cycle-1`
+4) `git checkout cycle-0`
 
 
 #### Tips
