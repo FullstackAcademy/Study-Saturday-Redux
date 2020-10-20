@@ -5,8 +5,6 @@ const app = express();
 
 module.exports = app;
 
-console.log('IN APP.JS')
-
 app.use(morgan('dev'));
 
 app.use(express.json());
