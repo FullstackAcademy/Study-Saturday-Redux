@@ -11,10 +11,10 @@
 
 ### Getting Started
 
-1. fork and `git clone`
-2. `npm install`
-3. `npm run seed`
-4. `git checkout cycle-0`
+- [ ] fork and `git clone`
+- [ ] `npm install`
+- [ ] `npm run seed`
+- [ ] `git checkout cycle-0`
 
 #### Tips
 
