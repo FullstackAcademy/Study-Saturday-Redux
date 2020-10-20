@@ -1,4 +1,4 @@
-# Study-Saturday-Fullstack
+# Study Saturdays: Week 4 - Fullstack Flow
 
 ## **Objective:** Build a form to add new students to our app
 
