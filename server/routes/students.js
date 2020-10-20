@@ -51,14 +51,17 @@ router.post('/', async (req, res, next) => {
 router.put('/:id', async (req, res, next) => {
   try {
     const { firstName, lastName, email } = req.body;
-    const [ rowsAffected, affectedRows ] = await Student.update({ firstName, lastName, email}, {
-      where: {
-        id: req.params.id
-      },
-      returning: true
-    })
-    const updatedStudent = affectedRows[0]
-    res.json(updatedStudent)
+    const [rowsAffected, affectedRows] = await Student.update(
+      { firstName, lastName, email },
+      {
+        where: {
+          id: req.params.id
+        },
+        returning: true
+      }
+    );
+    const updatedStudent = affectedRows[0];
+    res.json(updatedStudent);
   } catch (error) {
     next(error);
   }
@@ -71,9 +74,9 @@ router.delete('/:id', async (req, res, next) => {
       where: {
         id: req.params.id
       }
-    })
-    if (studentDeleted) res.sendStatus(204)
-    else res.sendStatus(404)
+    });
+    if (studentDeleted) res.sendStatus(204);
+    else res.sendStatus(404);
   } catch (error) {
     next(error);
   }

@@ -48,10 +48,10 @@ router.get('/:id', async (req, res, next) => {
 // POST /api/tests/students/:studentId
 router.post('/students/:studentId', async (req, res, next) => {
   try {
-    const student = await Student.findByPk(req.params.studentId)
+    const student = await Student.findByPk(req.params.studentId);
     let test = await Test.create(req.body);
     test = await test.setStudent(student);
-    res.status(201).json(test)
+    res.status(201).json(test);
   } catch (error) {
     next(error);
   }
@@ -64,9 +64,9 @@ router.delete('/:id', async (req, res, next) => {
       where: {
         id: req.params.id
       }
-    })
-    if (testDeleted) res.sendStatus(204)
-    else res.sendStatus(404)
+    });
+    if (testDeleted) res.sendStatus(204);
+    else res.sendStatus(404);
   } catch (error) {
     next(error);
   }
