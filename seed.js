@@ -1,8 +1,7 @@
-const db = require('./db/db');
+const db = require('./server/db/db');
 const { green, red } = require('chalk');
 const faker = require('faker');
-const Student = require('./db/models/students');
-const Test = require('./db/models/tests');
+const { Student, Test } = require('./server/db/models');
 
 const students = [
   {

@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const Sequelize = require('sequelize');
 const db = require('../db');
@@ -30,7 +30,7 @@ const Student = db.define(
   },
   {
     hooks: {
-      beforeCreate: student => {
+      beforeCreate: (student) => {
         student.firstName = `${student.firstName[0].toUpperCase()}${student.firstName.slice(
           1
         )}`;
@@ -42,7 +42,7 @@ const Student = db.define(
   }
 );
 
-Student.prototype.initials = function() {
+Student.prototype.initials = function () {
   return `${this.firstName[0]} ${this.lastName[0]}`;
 };
 
