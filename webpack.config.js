@@ -1,26 +1,33 @@
-'use strict';
+'use strict'
+
+const { resolve } = require('path')
 
 module.exports = {
-  // Compile ./browser/index.js
-  entry: ['babel-polyfill', './browser/index.js'],
+  entry: ['babel-polyfill', './browser/index'],
   output: {
     path: __dirname,
-    //write the output to ./public/bundle.js
-    filename: './public/bundle.js',
+    filename: './public/bundle.js'
   },
+  mode: 'development',
+  context: __dirname,
   devtool: 'source-map',
   resolve: {
-    // What file extensions will webpack look
-    extensions: ['.jsx', '.js', '.json'],
+    extensions: ['.js', '.jsx']
   },
   module: {
-    loaders: [
+    rules: [
       {
-        // Use babel for files that end in js or jsx.
         test: /jsx?$/,
-        exclude: /(node_modules)/,
-        loader: 'babel-loader',
+        include: resolve(__dirname, './browser'),
+        loader: 'babel-loader'
       },
-    ],
-  },
-};
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
+    ]
+  }
+}
