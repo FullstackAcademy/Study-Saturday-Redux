@@ -25,27 +25,9 @@ router.get('/:id', async (req, res, next) => {
 });
 
 // POST /api/students
-router.post('/', async (req, res, next) => {
-  try {
-    const { firstName, lastName, email } = req.body;
-    let student = await Student.create({
-      firstName,
-      lastName,
-      email
-    });
-    // Add a test?
-    const test = await Test.create({
-      subject: 'Programming',
-      grade: 90,
-      studentId: student.id
-    });
+// --- Cycle 0: add code below ---
 
-    student = await Student.findByPk(student.id, { include: { all: true } });
-    res.json(student);
-  } catch (error) {
-    next(error);
-  }
-});
+// --- Cycle 0: add code above ---
 
 // PUT /api/students/:id
 router.put('/:id', async (req, res, next) => {

@@ -1,6 +1,6 @@
 const { green, blue, red } = require('chalk');
-const server = require('./app');
-const db = require('./db/db');
+const server = require('./server/app');
+const db = require('./server/db/db');
 const PORT = 3000;
 
 const init = async () => {
