@@ -11,8 +11,6 @@ export default class Main extends Component {
       students: [],
       selectedStudent: {}
     };
-
-    this.selectStudent = this.selectStudent.bind(this);
   }
 
   componentDidMount() {
@@ -21,20 +19,20 @@ export default class Main extends Component {
 
   getStudents = async () => {
     try {
-      const { data: students } = await axios.get('/api/students')
+      const { data: students } = await axios.get('/api/students');
       this.setState({
         students
-      })
+      });
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
-  }
+  };
 
-  selectStudent(student) {
+  selectStudent = (student) => {
     return this.setState({
       selectedStudent: student
     });
-  }
+  };
 
   render() {
     return (

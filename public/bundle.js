@@ -1958,12 +1958,16 @@ var Main = function (_Component) {
       }, _callee, _this2, [[0, 8]]);
     }));
 
+    _this.selectStudent = function (student) {
+      return _this.setState({
+        selectedStudent: student
+      });
+    };
+
     _this.state = {
       students: [],
       selectedStudent: {}
     };
-
-    _this.selectStudent = _this.selectStudent.bind(_this);
     return _this;
   }
 
@@ -1971,13 +1975,6 @@ var Main = function (_Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       this.getStudents();
-    }
-  }, {
-    key: 'selectStudent',
-    value: function selectStudent(student) {
-      return this.setState({
-        selectedStudent: student
-      });
     }
   }, {
     key: 'render',
