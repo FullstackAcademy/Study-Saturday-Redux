@@ -2040,7 +2040,7 @@ exports.default = Main;
 
 
 Object.defineProperty(exports, "__esModule", ({
-    value: true
+  value: true
 }));
 
 var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -2050,78 +2050,78 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var avgGrade = function avgGrade(tests) {
-    return Math.round(tests.map(function (test) {
-        return test.grade;
-    }).reduce(function (x, y) {
-        return x + y;
-    }) / tests.length);
+  return Math.round(tests.map(function (test) {
+    return test.grade;
+  }).reduce(function (x, y) {
+    return x + y;
+  }) / tests.length);
 };
 
 var SingleStudent = function SingleStudent(props) {
-    console.log('ppp', props);
-    return _react2.default.createElement(
-        'div',
+  console.log('ppp', props);
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'h3',
+      null,
+      props.student.fullName
+    ),
+    _react2.default.createElement(
+      'h3',
+      null,
+      'Average grade: ',
+      avgGrade(props.student.tests),
+      '%'
+    ),
+    _react2.default.createElement(
+      'div',
+      null,
+      _react2.default.createElement(
+        'table',
         null,
         _react2.default.createElement(
-            'h3',
-            null,
-            props.student.fullName
-        ),
-        _react2.default.createElement(
-            'h3',
-            null,
-            'Average grade: ',
-            avgGrade(props.student.tests),
-            '%'
-        ),
-        _react2.default.createElement(
-            'div',
+          'thead',
+          null,
+          _react2.default.createElement(
+            'tr',
             null,
             _react2.default.createElement(
-                'table',
-                null,
-                _react2.default.createElement(
-                    'thead',
-                    null,
-                    _react2.default.createElement(
-                        'tr',
-                        null,
-                        _react2.default.createElement(
-                            'th',
-                            null,
-                            'Subject'
-                        ),
-                        _react2.default.createElement(
-                            'th',
-                            null,
-                            'Grade'
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    'tbody',
-                    null,
-                    props.student.tests.map(function (test) {
-                        return _react2.default.createElement(
-                            'tr',
-                            { key: test.id },
-                            _react2.default.createElement(
-                                'td',
-                                null,
-                                test.subject
-                            ),
-                            _react2.default.createElement(
-                                'td',
-                                null,
-                                test.grade,
-                                '%'
-                            )
-                        );
-                    })
-                )
+              'th',
+              null,
+              'Subject'
+            ),
+            _react2.default.createElement(
+              'th',
+              null,
+              'Grade'
             )
+          )
+        ),
+        _react2.default.createElement(
+          'tbody',
+          null,
+          props.student.tests.map(function (test) {
+            return _react2.default.createElement(
+              'tr',
+              { key: test.id },
+              _react2.default.createElement(
+                'td',
+                null,
+                test.subject
+              ),
+              _react2.default.createElement(
+                'td',
+                null,
+                test.grade,
+                '%'
+              )
+            );
+          })
         )
-    );
+      )
+    )
+  );
 };
 
 exports.default = SingleStudent;
@@ -2143,7 +2143,7 @@ exports.default = SingleStudent;
 
 
 Object.defineProperty(exports, "__esModule", ({
-    value: true
+  value: true
 }));
 
 var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -2153,29 +2153,28 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var StudentList = function StudentList(props) {
-    console.log("p", props);
-    return _react2.default.createElement(
-        "tbody",
-        null,
-        props.students.map(function (student) {
-            return _react2.default.createElement(
-                "tr",
-                { key: student.id },
-                _react2.default.createElement(
-                    "td",
-                    null,
-                    student.fullName
-                ),
-                _react2.default.createElement(
-                    "td",
-                    { onClick: function onClick() {
-                            return props.selectStudent(student);
-                        } },
-                    "Details"
-                )
-            );
-        })
-    );
+  return _react2.default.createElement(
+    'tbody',
+    null,
+    props.students.map(function (student) {
+      return _react2.default.createElement(
+        'tr',
+        { key: student.id },
+        _react2.default.createElement(
+          'td',
+          null,
+          student.fullName
+        ),
+        _react2.default.createElement(
+          'td',
+          { onClick: function onClick() {
+              return props.selectStudent(student);
+            } },
+          'Details'
+        )
+      );
+    })
+  );
 };
 
 exports.default = StudentList;
