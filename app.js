@@ -1,15 +1,14 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
 const Student = require('./routes/student');
 const Test = require('./routes/test');
 const morgan = require('morgan');
 const db = require('./db/db');
 const path = require('path');
 
-app.use(bodyParser.json());
+app.use(express.json());
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(morgan('dev'));
 
