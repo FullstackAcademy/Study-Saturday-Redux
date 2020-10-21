@@ -5,7 +5,7 @@ const { Student, Test } = require('../db/models');
 router.get('/', async (req, res, next) => {
   try {
     const students = await Student.findAll({
-      include: { all: true }
+      include: Test
     });
     res.json(students);
   } catch (error) {
