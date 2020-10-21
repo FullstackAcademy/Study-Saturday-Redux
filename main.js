@@ -6,7 +6,7 @@ const PORT = 3000;
 const init = async () => {
   try {
     await db.sync();
-    console.log(green('Database synced'))
+    console.log(green('Database synced'));
 
     server.listen(PORT, () =>
       console.log(blue('Listening on http://localhost:3000'))
