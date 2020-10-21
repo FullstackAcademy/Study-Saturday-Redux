@@ -130,7 +130,7 @@ const seed = async () => {
     db.close();
   } catch (error) {
     console.log(red('Error seeding database'));
-    console.log(err.stack);
+    console.log(error.stack);
     db.close();
   }
 };
