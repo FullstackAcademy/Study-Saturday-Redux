@@ -14,7 +14,7 @@ router.get('/', async (req, res, next) => {
 // GET /api/tests/passing
 router.get('/passing', async (req, res, next) => {
   try {
-    const passingTests = await Test.passing();
+    const passingTests = await Test.getPassing();
     res.json(passingTests);
   } catch (error) {
     next(error);
@@ -60,13 +60,13 @@ router.post('/students/:studentId', async (req, res, next) => {
 // DELETE /api/tests/:id
 router.delete('/:id', async (req, res, next) => {
   try {
-    const testDeleted = await Test.destroy({
-      where: {
-        id: req.params.id
-      }
-    });
-    if (testDeleted) res.sendStatus(204);
-    else res.sendStatus(404);
+    const test = await Test.findByPk(req.params.id);
+    if (test) {
+      await test.destroy();
+      res.sendStatus(204);
+    } else {
+      res.sendStatus(404);
+    }
   } catch (error) {
     next(error);
   }

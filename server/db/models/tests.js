@@ -15,7 +15,7 @@ const Test = db.define('test', {
   }
 });
 
-Test.passing = function () {
+Test.getPassing = function () {
   return Test.findAll({
     where: {
       grade: {
