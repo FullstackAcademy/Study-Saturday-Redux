@@ -38,8 +38,5 @@ const reducer = (state = initialState, action) => {
 
 const store = createStore(reducer, applyMiddleware(thunkMiddleware, loggerMiddleware));
 
-// dispatch your own actions here to test your store functionality:
-store.dispatch(fetchStudents())
-
 
 export default store;
