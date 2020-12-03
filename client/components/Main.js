@@ -16,7 +16,7 @@ export default class Main extends React.Component {
           <StudentList />
         </div>
 
-        {/* add your Route here! */}
+        <Route path="/students/:id" component={SingleStudent} />
       </Router>
     );
   }
