@@ -7,9 +7,6 @@ import loggerMiddleware from 'redux-logger';
 // ACTION CREATORS go here:
 
 
-// THUNK CREATORS go here:
-
-
 const initialState = {};
 
 const reducer = (state = initialState, action) => {
@@ -20,5 +17,10 @@ const reducer = (state = initialState, action) => {
 }
 
 const store = createStore(reducer, applyMiddleware(loggerMiddleware));
+
+// dispatch a few actions to test your store's functionality:
+store.dispatch(/* call your action creator here */)
+
+// ^ you can see the logs above in your console, thanks to redux-logger!
 
 export default store;
