@@ -9,5 +9,5 @@
 
 ## Steps
 
-- [ ]
+- [ ] The `StudentList` component is currently displaying dummy data. Use `connect` to hook it up to your Redux store, and fetch the right data.
 - [ ] Once done and tested, `git checkout cycle-2`
