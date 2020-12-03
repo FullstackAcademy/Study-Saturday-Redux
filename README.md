@@ -1,10 +1,10 @@
 # Study Saturdays: Week 3 - React-Redux
 
-## **Objective:** Build a Redux store to display all students in our app
-- [ ] **Cycle 0:** Create the store ⭐️
-- [ ] **Cycle 1:** `connect` your React components to your Redux store
-- [ ] **Cycle 2:** Display the dummy data
-- [ ] **Cycle 3:** Write the thunk
+## **Objective:** Build an app to display students and their test scores
+- [ ] **Cycle 0:** Build the store ⭐️
+- [ ] **Cycle 1:** `connect` the React component
+- [ ] **Cycle 2:** Set up React Router for a "single student" view
+- [ ] **Cycle 3:** Make the single student route functional
 - [ ] **Cycle 4 (Bonus):** Delete a student
 
 ## Steps

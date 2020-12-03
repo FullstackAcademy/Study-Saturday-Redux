@@ -17,6 +17,7 @@ const reducer = (state = initialState, action) => {
 }
 
 const store = createStore(reducer, applyMiddleware(loggerMiddleware));
+store.dispatch({type: 'HELLO_WORLD'})
 
 // dispatch a few actions to test your store's functionality:
 store.dispatch(/* call your action creator here */)
