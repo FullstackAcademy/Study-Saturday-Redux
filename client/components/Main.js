@@ -15,6 +15,8 @@ export default class Main extends React.Component {
           <h1>Students</h1>
           <StudentList />
         </div>
+
+        {/* add your Route here! */}
       </Router>
     );
   }

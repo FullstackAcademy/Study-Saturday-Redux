@@ -15,7 +15,7 @@ const gotStudents = (students) => ({
 
 
 // THUNK CREATORS go here:
-const fetchStudents = () => async (dispatch) => {
+export const fetchStudents = () => async (dispatch) => {
   const {data} = await axios.get('/api/students');
   dispatch(gotStudents(data));
 }
