@@ -20,5 +20,6 @@ const reducer = (state = initialState, action) => {
 }
 
 const store = createStore(reducer, applyMiddleware(loggerMiddleware));
+store.dispatch({type: 'HELLO_WORLD'})
 
 export default store;

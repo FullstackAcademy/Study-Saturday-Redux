@@ -1,29 +1,43 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
-const avgGrade = (tests) => {
-  return Math.round(
-    tests.map((test) => test.grade).reduce((x, y) => x + y) / tests.length
-  );
-};
+const DUMMY_DATA = [
+  {
+    id: 1,
+    fullName: "Jordan Walke",
+    firstName: "Jordan",
+    lastName: "Walke",
+    email: "jw@react.com",
+  },
+  {
+    id: 2,
+    fullName: "Dan Abramov",
+    firstName: "Dan",
+    lastName: "Avramov",
+    email: "da@react.com",
+  }
+]
 
-const StudentList = (props) => {
-  return (
-    <tbody>
-      {props.students.map((student) => {
-        const hasTests = student.tests && student.tests.length;
-        return (
-          <tr key={student.id}>
-            <td>{student.fullName}</td>
-            {hasTests ?
-              <td>{avgGrade(student.tests)}%</td>
-              :
-              <td>No tests yet!</td>
-            }
-          </tr>
-        )
-      })}
-    </tbody>
-  );
-};
+class StudentList extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <ul>
+        {DUMMY_DATA.map((student) => (
+          <li key={student.id}>
+            <div>
+              <p>Name: {student.fullName}</p>
+              <p>Email: {student.email}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    )
+
+  }
+}
 
 export default StudentList;
