@@ -1,5 +1,7 @@
 import {createStore, applyMiddleware} from 'redux';
 import loggerMiddleware from 'redux-logger';
+import axios from 'axios';
+import thunkMiddleware from 'redux-thunk';
 
 // ACTION TYPES go here:
 const GOT_STUDENTS = 'GOT_STUDENTS';
@@ -10,6 +12,13 @@ const gotStudents = (students) => ({
   type: GOT_STUDENTS,
   students
 });
+
+
+// THUNK CREATORS go here:
+const fetchStudents = () => async (dispatch) => {
+  const {data} = axios.get('/api/students');
+  dispatch(gotStudents(data));
+}
 
 
 const initialState = {
@@ -27,10 +36,10 @@ const reducer = (state = initialState, action) => {
   }
 }
 
-const store = createStore(reducer, applyMiddleware(loggerMiddleware));
+const store = createStore(reducer, applyMiddleware(thunkMiddleware, loggerMiddleware));
 
-// dispatch a few actions to test your store's functionality:
-// store.dispatch(gotStudents(['sally', 'bob', 'sue']))
+// dispatch your own actions here to test your store functionality:
+store.dispatch({type: 'HELLO_WORLD'})
 
 
 export default store;
