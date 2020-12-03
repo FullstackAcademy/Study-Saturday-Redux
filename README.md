@@ -1,11 +1,11 @@
-# Study Saturdays: Week 4 - Fullstack Flow
+# Study Saturdays: Week 3 - React-Redux
 
-## **Objective:** Build a form to add new students to our app
-- [ ] **Cycle 0:** Create a route for adding students
-- [ ] **Cycle 1:** Create and render a form
-- [ ] **Cycle 2:** Update state with form input
-- [ ] **Cycle 3:** Make the form functional
-- [ ] **Cycle 4 (Bonus):** Refactor
+## **Objective:** Build a Redux store to display all students in our app
+- [ ] **Cycle 0:** Create the store
+- [ ] **Cycle 1:** `connect` the React component
+- [ ] **Cycle 2:** Display the dummy data
+- [ ] **Cycle 3:** Write the thunk
+- [ ] **Cycle 4 (Bonus):** Delete a student
 
 ### **Getting Started**
 

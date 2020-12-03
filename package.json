@@ -1,7 +1,7 @@
 {
   "name": "study-staturday-week-3",
   "version": "1.0.0",
-  "description": "fun w express, sequelize, and react!",
+  "description": "fun with react-redux!",
   "main": "index.js",
   "scripts": {
     "start": "npm run start-server & npm run build-watch",
@@ -21,6 +21,10 @@
     "pg": "^8.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "sequelize": "^6.3.5"
   },
   "devDependencies": {
