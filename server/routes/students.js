@@ -16,7 +16,9 @@ router.get('/', async (req, res, next) => {
 // GET /api/students/:id
 router.get('/:id', async (req, res, next) => {
   try {
-    const student = await Student.findByPk(req.params.id);
+    const student = await Student.findByPk(req.params.id, {
+      include: Test
+    });
     if (student) res.json(student);
     else res.sendStatus(404);
   } catch (error) {
