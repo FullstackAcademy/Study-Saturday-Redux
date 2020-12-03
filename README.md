@@ -9,8 +9,13 @@
 
 ## Steps
 
-- [ ] Build out the Redux store
-  - See the dummy data in `components/Main.js` for an example of how the data will be structured
+- [ ] Build out the Redux store, including:
+  - [ ] Action type
+  - [ ] Action creator
+  - [ ] Thunk creator
+  - [ ] Initial state
+  - [ ] Reducer
+  - NOTE: See the dummy data in `components/StudentList.js` for an example of how the data will be structured
 - [ ] Test your Redux store functionality
   - Dispatch a few actions to your reducer, then check the logs in your console. Is it doing what you expect?
 - [ ] Once done and tested, `git checkout cycle-1`
