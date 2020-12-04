@@ -11,5 +11,6 @@
 
 - [ ] fork and `git clone`
 - [ ] `npm install`
+- [ ] `createdb study-saturdays`
 - [ ] `npm run seed`
 - [ ] `git checkout cycle-0` to begin
