@@ -10,6 +10,9 @@
 ## Steps
 
 - [ ] Add a `<Link>` under each student's info in the `StudentList` component
+  - Each link will display the text "View Detail"
+  - Clicking the `<Link>` will change to URL to `/students/<student id here>`
 - [ ] Make sure to write a `<Route>` to match
   - See the `<Main>` component for a space to put your `<Route>`
+- [ ] Test it out! Clicking "View Detail" should show dummy data for a single student
 - [ ] Once done and tested, `git checkout cycle-3`

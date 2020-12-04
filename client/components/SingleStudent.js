@@ -8,10 +8,10 @@ const avgGrade = (tests) => {
 
 const DUMMY_DATA = {
   id: 1,
-  fullName: "Jordan Walke",
-  firstName: "Jordan",
-  lastName: "Walke",
-  email: "jw@react.com",
+  fullName: "Student McDummydata",
+  firstName: "Student",
+  lastName: "McDummydata",
+  email: "sm@dummydata.com",
   tests: [
     {
       id: 1,
