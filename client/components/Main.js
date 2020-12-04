@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter as Router, Route} from 'react-router-dom'
+import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 import StudentList from './StudentList.js';
 import SingleStudent from './SingleStudent';
 
@@ -12,11 +12,12 @@ export default class Main extends React.Component {
     return (
       <Router>
         <div>
-          <h1>Students</h1>
-          <StudentList />
+          <h1>Student Dashboard</h1>
         </div>
-
-        {/* add your Route here! */}
+        <Switch>
+          <Route exact path="/" component={StudentList} />
+          {/* add your Route here! */}
+        </Switch>
       </Router>
     );
   }
