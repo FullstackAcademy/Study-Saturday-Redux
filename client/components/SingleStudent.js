@@ -6,13 +6,38 @@ const avgGrade = (tests) => {
   );
 };
 
+const DUMMY_DATA = {
+  id: 1,
+  fullName: "Jordan Walke",
+  firstName: "Jordan",
+  lastName: "Walke",
+  email: "jw@react.com",
+  tests: [
+    {
+      id: 1,
+      subject: "Computer Science",
+      grade: 45,
+    },
+    {
+      id: 6,
+      subject: "Art",
+      grade: 60,
+    },
+    {
+      id: 12,
+      subject: "ullam",
+      grade: 45,
+    },
+  ],
+};
+
 class SingleStudent extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    const { student } = this.props;
+    const student = DUMMY_DATA;
     const hasTests = student.tests.length;
 
     return (
