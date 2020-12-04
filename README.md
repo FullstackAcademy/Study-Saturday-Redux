@@ -10,6 +10,9 @@
 ## Steps
 
 - [ ] Fetch the single student's data and display it
-  - Hint: How did you fetch and display data in cycle-1?
-  - Hint: You'll need the student's `id` in order to fetch their data. Where can you get that from?
+  - [ ] Edit the `store.js` file to handle single student data
+    - Hint: How did you do this in cycle-1?
+  - [ ] Edit the `SingleStudent.js` component file to connect to the Redux store and display the student data
+    - Hint: Remember to replace the `DUMMY_DATA` with your "real" data
+    - Hint: You'll need the student's `id` in order to fetch their data. Where can you get that from?
 - [ ] Once done and tested, `git checkout cycle-4`
