@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import {HashRouter as Router, Route, Switch} from 'react-router-dom'
-=======
-import {HashRouter as Router, Switch, Route} from 'react-router-dom'
->>>>>>> cycle-2
 import StudentList from './StudentList.js';
 import SingleStudent from './SingleStudent';
 
