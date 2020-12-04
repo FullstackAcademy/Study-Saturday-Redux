@@ -4,9 +4,7 @@ const { Student, Test } = require('../db/models');
 // GET /api/students
 router.get('/', async (req, res, next) => {
   try {
-    const students = await Student.findAll({
-      include: Test
-    });
+    const students = await Student.findAll();
     res.json(students);
   } catch (error) {
     next(error);
