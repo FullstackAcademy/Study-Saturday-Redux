@@ -13,7 +13,6 @@ export default class Main extends React.Component {
       <Router>
         <div>
           <h1>Student Dashboard</h1>
-          {/* <StudentList /> */}
         </div>
 
         <Switch>
