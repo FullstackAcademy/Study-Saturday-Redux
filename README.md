@@ -1,4 +1,6 @@
-# Study Saturdays: Week 3 - React-Redux
+# Study Saturdays: Week 4 - React-Redux
+
+## Lecture Slides: [Study-Saturday-Redux](https://docs.google.com/presentation/d/1eTUQ5Hz6qVi83dacTPEUTiiJQeMJkcxrQf0AOTOYJTQ/edit?usp=sharing)
 
 ## **Objective:** Build an app to display students and their test scores
 - [ ] **Cycle 0:** Build the store
