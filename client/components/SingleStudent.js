@@ -5,8 +5,7 @@ const avgGrade = (tests) => {
     tests.map((test) => test.grade).reduce((x, y) => x + y) / tests.length
   )
 }
-
-function SingleStudent(props) {
+const SingleStudent = (props) => {
   const { student } = props
   const hasTests = student.tests.length
 

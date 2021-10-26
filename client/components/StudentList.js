@@ -18,7 +18,7 @@ const DUMMY_DATA = [
   },
 ]
 
-function StudentList(props) {
+const StudentList = (props) => {
   return (
     <ul>
       {DUMMY_DATA.map((student) => (

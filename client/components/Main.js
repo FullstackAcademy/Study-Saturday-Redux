@@ -3,7 +3,7 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import StudentList from './StudentList.js'
 import SingleStudent from './SingleStudent'
 
-export default function Main(props) {
+const Main = (props) => {
   return (
     <Router>
       <div>
@@ -15,3 +15,5 @@ export default function Main(props) {
     </Router>
   )
 }
+
+export default Main
