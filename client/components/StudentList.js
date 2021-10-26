@@ -3,7 +3,7 @@ import { fetchStudents } from '../redux/store'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-function StudentList(props) {
+const StudentList = (props) => {
   const dispatch = useDispatch()
   const students = useSelector((state) => state.students)
 

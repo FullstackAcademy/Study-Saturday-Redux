@@ -31,7 +31,7 @@ const DUMMY_DATA = {
   ],
 }
 
-function SingleStudent(props) {
+const SingleStudent = (props) => {
   const student = DUMMY_DATA
   const hasTests = student.tests.length
 
