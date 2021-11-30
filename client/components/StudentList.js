@@ -1,41 +1,29 @@
-import React from 'react';
-import {fetchStudents} from '../redux/store';
-import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { fetchStudents } from '../redux/store'
+import { useSelector, useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 
-class StudentList extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const StudentList = (props) => {
+  const dispatch = useDispatch()
+  const students = useSelector((state) => state.students)
 
-  componentDidMount() {
-    this.props.loadStudents();
-  }
+  useEffect(() => {
+    dispatch(fetchStudents())
+  }, [dispatch])
 
-  render() {
-    return (
-      <ul>
-        {this.props.students.map((student) => (
-          <li key={student.id}>
-            <div>
-              <p>Name: {student.fullName}</p>
-              <p>Email: {student.email}</p>
-              <Link to={`/students/${student.id}`}>View Detail</Link>
-            </div>
-          </li>
-        ))}
-      </ul>
-    )
-
-  }
+  return (
+    <ul>
+      {students.map((student) => (
+        <li key={student.id}>
+          <div>
+            <p>Name: {student.fullName}</p>
+            <p>Email: {student.email}</p>
+            <Link to={`/students/${student.id}`}>View Detail</Link>
+          </div>
+        </li>
+      ))}
+    </ul>
+  )
 }
 
-const mapStateToProps = (state) => ({
-  students: state.students
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  loadStudents: () => dispatch(fetchStudents())
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(StudentList);
+export default StudentList
