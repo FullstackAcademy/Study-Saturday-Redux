@@ -18,6 +18,7 @@ const StudentList = (props) => {
           <div>
             <p>Name: {student.fullName}</p>
             <p>Email: {student.email}</p>
+            <Link to={`/students/${student.id}`}>View Detail</Link>
           </div>
         </li>
       ))}

@@ -3,7 +3,7 @@
 ## **Objective:** Build an app to display students and their test scores
 - [x] **Cycle 0:** Build the store
 - [x] **Cycle 1:** `connect` the React component
-- [ ] **Cycle 2:** Set up React Router for a "single student" view ⭐️
+- [x] **Cycle 2:** Set up React Router for a "single student" view ⭐️
 - [ ] **Cycle 3:** Make the single student route functional
 - [ ] **Cycle 4 (Bonus):** Delete a student
 

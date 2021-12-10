@@ -9,9 +9,10 @@ const Main = (props) => {
       <div>
         <h1>Student Dashboard</h1>
       </div>
+
       <Switch>
         <Route exact path="/" component={StudentList} />
-        {/* add your Route here! */}
+        <Route path="/students/:id" component={SingleStudent} />
       </Switch>
     </Router>
   )
